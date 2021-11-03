@@ -1,0 +1,1 @@
+import * as crpto from 'crypto';
