@@ -28,7 +28,21 @@ class Block {
 }
 
 class Chain {
+    public static instance = new Chain();
 
+    chain: Block[];
+
+    constructor() {
+        this.chain = [ new Block('', new Transaction(10000, 'genesis', 'ryanflynndev')) ];
+    }
+
+    get lastBlock() {
+        return this.chain[this.chain.length - 1];
+    }
+
+    addBlock(transaction: Transaction, senderPublicKey: string, signature: string) {
+
+    }
 }
 
 class Wallet {
